@@ -1,4 +1,4 @@
-package com.aggregator.core.source;
+package com.aggregator.core.storage;
 
 public enum WriteMode {
     NEW,

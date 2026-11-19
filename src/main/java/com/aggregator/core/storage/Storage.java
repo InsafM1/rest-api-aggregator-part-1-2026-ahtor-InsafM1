@@ -1,7 +1,6 @@
 package com.aggregator.core.storage;
 
 import com.aggregator.core.model.AggregatedItem;
-import com.aggregator.core.source.WriteMode;
 
 import java.util.List;
 
