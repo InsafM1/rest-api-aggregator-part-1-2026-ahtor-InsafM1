@@ -48,7 +48,7 @@ public class JavaHttpClientWrapper implements HttpClientWrapper {
             }
 
             return response.body();
-        } catch (IOException | InterruptedException e) {
+        } catch (IOException | InterruptedException | IllegalArgumentException e) {
             long elapsed = System.currentTimeMillis() - startTime;
             log.error("HTTP GET {} failed in {} ms: {}", url, elapsed, e.getMessage());
             throw new HttpException("Request failed: " + url, e);

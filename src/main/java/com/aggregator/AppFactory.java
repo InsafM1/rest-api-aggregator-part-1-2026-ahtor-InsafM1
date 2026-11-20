@@ -41,7 +41,7 @@ public class AppFactory {
                 "csv",  csvStorage
         );
 
-        Aggregator aggregator = new Aggregator(sources, jsonStorage);
+        Aggregator aggregator = new Aggregator(sources);
 
         ItemPrinter printer = new ItemPrinter();
         return new Cli(aggregator, storagesByFormat, printer);

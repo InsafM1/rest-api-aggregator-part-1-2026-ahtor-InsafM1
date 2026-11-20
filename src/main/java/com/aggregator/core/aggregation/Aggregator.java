@@ -14,17 +14,15 @@ import java.util.Map;
 
 public class Aggregator {
     private static final Logger log = LoggerFactory.getLogger(Aggregator.class);
-
     private final List<ApiSource> sources;
-    private final Storage storage;
 
-    public Aggregator(List<ApiSource> sources, Storage storage) {
+    public Aggregator(List<ApiSource> sources) {
         this.sources = sources;
-        this.storage = storage;
     }
 
     public AggregationResult poll(List<String> sourceNames,
                                   Map<String, Map<String, String>> paramsBySource,
+                                  Storage storage,
                                   WriteMode mode) {
         List<AggregatedItem> collected = new ArrayList<>();
         List<String> errors = new ArrayList<>();

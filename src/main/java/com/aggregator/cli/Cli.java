@@ -68,6 +68,7 @@ public class Cli {
             AggregationResult result = aggregator.poll(
                     parsed.sources(),
                     paramsBySource,
+                    storage,
                     parsed.mode() == null ? WriteMode.NEW : parsed.mode()
             );
             System.out.println("Saved " + result.saved() + " items, "
